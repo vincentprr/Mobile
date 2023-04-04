@@ -1,1 +1,1 @@
-Groupe : MIKULIC Téo, MARTIN Tom, POIRIER Vincent"# Mobile" 
+## Groupe : MIKULIC TÃ©o, POIRIER Vincent
