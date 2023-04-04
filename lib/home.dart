@@ -18,8 +18,6 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     Ecran1(),
-    Ecran2(),
-    const Ecran3(),
     const EcranSettings()
   ];
 
@@ -44,6 +42,10 @@ class _HomeState extends State<Home> {
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.article),
+            label: 'Card1',
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings')
         ],
       ),
