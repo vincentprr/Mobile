@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.article),
-            label: 'Card1',
+            label: 'Tasks',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings')
         ],
