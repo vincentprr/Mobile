@@ -23,31 +23,6 @@ class Ecran1 extends StatelessWidget {
                 ),
                 title: Text(tasks[index].title),
                 subtitle: Text(tasks[index].tags.join(" ")),
-
-                trailing: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    FloatingActionButton(
-                      heroTag: 'btnmodif${tasks[index].id}',
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => MyCustomFormModification(
-                                  taskId: tasks[index].id),
-                            ));
-                      },
-                      child: const Icon(Icons.edit),
-                    ),
-                    FloatingActionButton(
-                      heroTag: 'btndel${tasks[index].id}',
-                      onPressed: () {
-                        context.read<TaskViewModel>().delTask(tasks[index]);
-                      },
-                      child: const Icon(Icons.delete),
-                    )
-                  ],
-                ),
                 onTap: () {
                   Navigator.push(
                       context,
