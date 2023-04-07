@@ -23,7 +23,28 @@ class Detail extends StatelessWidget {
             Text('Difficulty : ${task.difficulty}'),
             Text('Hours : ${task.nbhours}'),
             Text('Task tags: ${task.tags.join(" ")}'),
+            Row(children:[
+            FloatingActionButton(
+              heroTag: 'btnmodif${task.id}',
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyCustomFormModification(
+                          taskId: task.id),
+                    ));
+              },
+              child: const Icon(Icons.edit),
+            ),
+            FloatingActionButton(
+              heroTag: 'btndel${task.id}',
+              onPressed: () {
+                context.read<TaskViewModel>().delTask(task);
+              },
+              child: const Icon(Icons.delete),
+            )]
           ]),
+         
         ),
       ),
     );
